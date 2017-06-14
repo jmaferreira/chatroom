@@ -14,7 +14,9 @@ chatroomApp.config(function($routeProvider) {
     .when("/fullControl", {
         templateUrl : "/partials/full-control.html",
         controller: "chatroomController"
-    })
+    }).otherwise({
+        template : "<h2>Ups! Wrong page!</h2>"
+    });
 });
 
 
