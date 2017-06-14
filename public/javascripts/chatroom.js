@@ -5,7 +5,7 @@ var chatroomApp = angular.module('chatroom', ["ngRoute"]);
 chatroomApp.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "index.htm"
+        redirectTo: '/fullControl'
     })
     .when("/readOnly", {
         templateUrl : "/partials/message-list.html",
