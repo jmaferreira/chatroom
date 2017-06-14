@@ -1,0 +1,21 @@
+<div>
+    <form name="chatroomForm">
+        <label for="name">Name: </label>
+        <input class="form-control" id="name" type="text" ng-model="name" ng-required="true"/>
+
+        <label for="message">Message: </label>
+        <textarea class="form-control" id="message" ng-model="message" ng-required="true"></textarea>
+        <br/>
+        <div class="alert alert-warning" ng-show="!chatroomForm.$valid">
+            All fields are required!
+        </div>
+
+        <input ng-disabled="!chatroomForm.$valid" class="btn btn-primary" type="submit" ng-click="submitMessage();"></input>
+    </form>
+</div>
+
+
+
+<div ng-include="'/partials/message-list.html'"
+
+</div>

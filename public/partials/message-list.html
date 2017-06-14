@@ -1,0 +1,19 @@
+<h2>Messages</h2>
+
+<div  ng-show="messages.length == 0">
+    No messages submitted yet. Post a new message to try it out!
+</div>
+
+<div ng-repeat="m in messages">
+    <div class="message-wrapper">
+        <a ng-show="$location.path()!='/readOnly'" class="message-remove" ng-click="removeMessage(m.id)">
+            <span class="glyphicon glyphicon-remove-circle"> </span>
+        </a>
+
+        <strong> {{ m.name }} </strong> on {{ m.date | date:"yyyy-MM-dd 'at' hh:mm" }} said
+        <div class="message">
+            <pre>{{ m.message }}</pre>
+
+        </div>
+    </div>
+</div>
